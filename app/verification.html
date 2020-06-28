@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="apple-touch-icon" sizes="57x57" href="img/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="img/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="img/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="img/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="img/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="img/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="img/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="img/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="img/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <title>Clever PSP</title>
+</head>
+
+<body>
+    <header class="verification-header">
+        <div class="container">
+            <div class="logo-area">
+                <a target="_blank" href="http://cleverpsp.com"><img class="clever-logo" src="img/clever-logo.svg" alt=""></a>
+                <div class="hr"></div>
+                <img class="client-logo" src="img/mastercard-code.svg" alt="">
+            </div>
+        </div>
+    </header>
+    <section class="main-section">
+        <div class="container">
+            <div class="section-area verification-section">
+                <h3 class="text-center">Проверка платежа</h3>
+                <table>
+                    <tr>
+                        <td>Магазин</td>
+                        <td>SVYAZNOY</td>
+                    </tr>
+                    <tr>
+                        <td>Описание</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Сумма</td>
+                        <td>335,228.00 RUB</td>
+                    </tr>
+                    <tr>
+                        <td>Дата</td>
+                        <td>08/08/2020</td>
+                    </tr>
+                    <tr>
+                        <td>Номер карты</td>
+                        <td>**** **** **** 1234</td>
+                    </tr>
+                    <tr>
+                        <td>Личное приветствие</td>
+                        <td>None</td>
+                    </tr>
+                </table>
+                <hr>
+                <p class="text-center">
+                    Одноразовый код был отправлен на&nbsp;ваш&nbsp;номер телефона. Пожалуста, проверьте реквизиты транзакции и&nbsp;введите код из&nbsp;SMS.
+                </p>
+                <input maxlength="4" type="tel">
+                <p class="text-center fs9">Код действителен <span id="m_timer">2:43</span></p>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <a class="back" href="main.html">Назад</a>
+                        <a class="help" href="https://cleverpsp.com/voprosy-i-otvety">Помощь</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <form id="3dsForm" method="POST" action="">
+        <input type="hidden" id="paReq" name="PaReq" value="">
+        <input type="hidden" id="md" name="MD" value="">
+        <input type="hidden" id="termURL" name="TermUrl" value="#clientRootURL#confirm/?inData=request&nonce=#nonce3DS#&sessionID=#sessionID#">
+    </form>
+    <footer>
+        <div class="container">
+            <div class="mobile-menu">
+                <nav class="menu">
+                    <ul>
+                        <li>
+                            <a target="_blank" href="http://cleverpsp.com">О сервисе</a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="https://cleverpsp.com/voprosy-i-otvety">Поддержка</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="footer-info">
+                    <img src="img/shield-iconm.svg" alt="">
+                    <p>
+                        Защищено сертификатом TLS и&nbsp;протоколом 3D Secure</p>
+                    <img src="img/lock-iconm.svg" alt="">
+                    <p>
+                        Clever не&nbsp;передаёт сторонним лицам ваши данные, в&nbsp;том числе данные карты
+                    </p>
+                </div>
+            </div>
+            <div class="logo-footer-area">
+                <img src="img/visa-logo.svg">
+                <img src="img/mastercard-logo.svg">
+                <img src="img/mir-logo.svg">
+            </div>
+            <p class="copy text-center"><label>© 2018-2019, ООО «Платежный Центр», тел. +7 (495) 241-02-08,&nbsp;</label><a href="https://8pc.ru" target="__blank">www.8pc.ru</a></p>
+        </div>
+    </footer>
+	<script src="js/libs.min.js"></script>
+</body>
+
+</html>

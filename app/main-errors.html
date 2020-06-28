@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="apple-touch-icon" sizes="57x57" href="img/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="img/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="img/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="img/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="img/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="img/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="img/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="img/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="img/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <title>Clever PSP</title>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="logo-area">
+                <a target="_blank" href="http://cleverpsp.com"><img class="clever-logo" src="img/clever-logo.svg" alt=""></a>
+                <div class="hr"></div>
+                <img class="client-logo" src="img/client-logo.svg" alt="">
+            </div>
+            <nav class="menu">
+                <ul>
+                    <li>
+                        <a target="_blank" href="http://cleverpsp.com">О сервисе</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://cleverpsp.com/voprosy-i-otvety">Поддержка</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section class="main-section main-page-section">
+        <div class="container">
+            <div class="section-area">
+                <div class="flag">
+                    <span id="m_timer">14:33</span>
+                    до&nbsp;окончания оплаты заказа
+                </div>
+                <div class="section-inner">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="h3-title">Заказ №7732598</div>
+                            <h1 class="green">4 221 ₽</h1>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="desctop-safe">
+                                <div class="safe-block">
+                                    <img src="img/ico-1.svg" alt="">
+                                    <p>
+                                        Защищено сертификатом TLS
+                                        и&nbsp;протоколом 3D Secure</p>
+                                </div>
+                                <div class="safe-block">
+                                    <img src="img/ico-2.svg" alt="">
+                                    <p>
+                                        Clever не передаёт сторонним лицам
+                                        ваши данные, в&nbsp;том числе данные карты</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="section-inner">
+                    <div class="h3-title">Введите номер телефона</div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <form>
+                                <div class="input-area">
+                                    <span>+7</span>
+                                    <input type="tel" class="phone_with_ddd" placeholder="(000) 000-00-00">
+                                    <label style="display: none;" class="alertLabel">Поле заполнено с&nbsp;ошибкой</label>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="button-area w100btn">
+                                <div class="btn">Рассрочка</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-area no-active no-active-checkbox">
+                <div class="top-card">
+                    <div class="h3-title">Заполните данные карты</div>
+                    <form action="#">
+                        <label>Номер карты</label>
+                        <input type="tel" class="panInput" placeholder="0000-0000-0000-0000" autocomplete="off">
+                        <label>Месяц/год</label>
+                        <div class="input-split">
+                            <input id="exp" type="tel" class="expInput" placeholder="ММ / ГГ" autocomplete="off">
+                        </div>
+                        <div class="info-card">
+                            <p style="display: none" class="success-card">
+                                <img src="img/ok-on.svg" alt="">Карта одобрена
+                            </p>
+                            <div style="display: none;" class="loader-card">
+                                <div class="small-loader">
+                                    <div class="loader-circle"></div>
+                                </div>
+                                <span>Проверяем карту...</span>
+                            </div>
+                            <label style="display: none" id="message" class="messengeLabel">
+                                Карта не&nbsp;найдена Пожалуйста, проверьте данные
+                            </label>
+                        </div>
+                        <div class="checkbox-area hidden-sm hidden-md hidden-lg">
+                            <p>
+                                <input type="checkbox" disabled="disabled" id="c1s" checked>
+                                <label for="c1s">запомнить для будущих покупок</label>
+                            </p>
+                        </div>
+                    </form>
+                </div>
+                <div class="back-card">
+                    <img src="img/CV2.svg" alt="">
+                    <div class="clearfix"></div>
+                    <label for="">CV2-код</label>
+                    <div class="back-input">
+                        <div class="decor-input">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <form>
+                            <input type="password" id="cvc" placeholder="" maxlength="3" class="cvcInput" autocomplete="off">
+                        </form>
+                        <div style="display: none;" class="no-vision"></div>
+                        <div style="display: none;" class="vision"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="bottom-area no-active">
+                <div class="checkbox-area hidden-sm hidden-md hidden-lg">
+                    <p>
+                        <input type="checkbox" id="c2" checked>
+                        <label for="c2">
+                            нажимая на&nbsp;кнопку «Оплатить», «Кредит», вы&nbsp;соглашаетесь
+                            с&nbsp;<a class="green bold" target="_blank" href="https://cleverpsp.com/polityca-obrabotki-personalnyh-dannyh">Условиями передачи персональных данных Clever PSP</a>
+                        </label>
+                    </p>
+                </div>
+                <a href="loader.html">
+                    <div class="button-area w100btn">
+                        <button type="button" id="payButton">Оплатить 4 221 ₽</button>
+                    </div>
+                </a>
+                <div class="checkbox-area cvb1 hidden-xs">
+                    <p>
+                        <input disabled="disabled" type="checkbox" id="c1v" checked>
+                        <label for="c1v">запомнить для будущих покупок</label>
+                    </p>
+                </div>
+                <div class="checkbox-area cvb2 hidden-xs">
+                    <p>
+                        <input disabled="disabled" type="checkbox" id="c2c" checked>
+                        <label for="c2c">
+                            нажимая на&nbsp;кнопку «Оплатить», «Кредит», вы&nbsp;соглашаетесь
+                            с&nbsp;<a class="green bold" target="_blank" href="https://cleverpsp.com/polityca-obrabotki-personalnyh-dannyh">Условиями передачи персональных данных Clever PSP</a>
+                        </label>
+                    </p>
+                </div>
+                <span>
+                    Столкнулись с&nbsp;трудностями?
+                    <a class="green bold" target="_blank" href="https://cleverpsp.com/voprosy-i-otvety">Напишите нам</a>
+                </span>
+            </div>
+        </div>
+    </section>
+    <form id="3dsForm" method="POST" action="">
+        <input type="hidden" id="paReq" name="PaReq" value="">
+        <input type="hidden" id="md" name="MD" value="">
+        <input type="hidden" id="termURL" name="TermUrl" value="#clientRootURL#confirm/?inData=request&nonce=#nonce3DS#&sessionID=#sessionID#">
+    </form>
+    <footer>
+        <div class="container">
+            <div class="mobile-menu">
+                <nav class="menu">
+                    <ul>
+                        <li>
+                            <a target="_blank" href="http://cleverpsp.com">О сервисе</a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="https://cleverpsp.com/voprosy-i-otvety">Поддержка</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="footer-info">
+                    <img src="img/shield-iconm.svg" alt="">
+                    <p>
+                        Защищено сертификатом TLS и&nbsp;протоколом 3D Secure</p>
+                    <img src="img/lock-iconm.svg" alt="">
+                    <p>
+                        Clever не&nbsp;передаёт сторонним лицам ваши данные, в&nbsp;том числе данные карты
+                    </p>
+                </div>
+            </div>
+            <div class="logo-footer-area">
+                <img src="img/visa-logo.svg">
+                <img src="img/mastercard-logo.svg">
+                <img src="img/mir-logo.svg">
+            </div>
+            <p class="copy text-center"><label>© 2018-2019, ООО «Платежный Центр», тел. +7 (495) 241-02-08,&nbsp;</label><a href="https://8pc.ru" target="__blank">www.8pc.ru</a></p>
+        </div>
+    </footer>
+    <script src="js/libs.min.js"></script>
+</body>
+
+</html>
+<script>
+$('.phone_with_ddd').on('keyup', function() {
+    var $this = $(this),
+        val = $this.val();
+
+    if (val.length >= 15) {
+        $('.input-area .alertLabel').show();
+        $('.phone_with_ddd').addClass('inputAlert');
+
+    } else {
+        $('.input-area .alertLabel').hide();
+        $('.phone_with_ddd').removeClass('inputAlert');
+    }
+});
+
+
+
+
+$('.expInput').on('keyup', function() {
+    var $this = $(this),
+        val = $this.val();
+
+    if (val.length >= 7) {
+        $('#message').text("Карта просрочена");
+        $('.expInput').addClass('inputAlert');
+    } else {
+
+    }
+});
+
+
+$('.panInput').on('keyup', function() {
+    var $this = $(this),
+        val = $this.val();
+    if (val.length >= 19) {
+        $('.panInput').addClass('inputAlert');
+        $('.info-card').addClass('error-card');
+
+    } else {
+        $('.panInput').removeClass('inputAlert');
+        $('.info-card').removeClass('error-card');
+    }
+});
+
+
+
+
+$('.cvcInput').on('keyup', function() {
+    var $this = $(this),
+        val = $this.val();
+
+    if (val.length >= 3) {
+        $('#message').text("Неверный код");
+        $('.cvcInput').addClass('inputAlert');
+    } else {
+
+    }
+});
+</script>
